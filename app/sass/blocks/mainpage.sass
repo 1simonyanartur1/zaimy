@@ -1,0 +1,360 @@
+.mainpage
+	padding: 30px 0
+	.container
+		display: flex
+		align-items: flex-start
+		justify-content: space-between
+
+	.filter
+		background: $white
+		border-radius: 10px
+		padding: 35px 45px
+		&__title
+			font: bold 18px 'Gilroy', sans-serif
+			margin-bottom: 15px
+		li.active a
+			color: $green
+		a
+			font: 300 14px/1.4 'Gilroy', sans-serif
+			color: $black
+			&:hover
+				color: $green
+
+
+.nice-select
+	padding: 0 30px 0 0
+	height: auto
+	line-height: 1
+	border: none
+	margin: 0 70px 0 15px
+	.current
+		font: 14px 'Gilroy', sans-serif
+	.list
+		background: $white
+		box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2)
+		border-radius: 5px
+	.option
+		height: auto
+		line-height: 1.4
+		padding: 2px 14px
+		min-height: 5px
+		font: 12px 'Gilroy', sans-serif
+		&:hover
+			background: $green2
+		&.selected
+			font-weight: normal
+			&.focus
+				color: $white
+				background: $green
+
+
+
+.checkbox
+	position: relative
+	display: block
+	padding-left: 25px
+	display: flex
+	align-items: center
+	margin-bottom: 20px
+	@include mq($max-width: 550px)
+		padding-left: 0
+	&__input
+		margin-right: 10px
+	&__mark
+		font: 14px 'Gilroy', sans-serif
+		color: $black
+
+
+
+
+// Калькулятор
+.summ-tooltip,
+.days-tooltip
+	position: absolute
+	z-index: 1000
+	display: block
+	visibility: visible
+	bottom: 120%
+	// min-width: 100px
+	left: 50%
+	transform: translateX(-50%)
+
+.summ_min,
+.summ_max,
+.days_min,
+.days_max
+	position: absolute
+	font: bold 10px 'Gilroy', sans-serif
+	bottom: 18px
+
+.summ_min,
+.days_min
+	left: 0
+.summ_max,
+.days_max
+	right: -20px
+	@include mq($max-width: 900px)
+		right: 0
+
+.summ-tooltip-inner,
+.days-tooltip-inner
+	font: bold 10px 'Gilroy'
+	color: $black
+	text-align: center
+	background: $white
+	padding: 2px 4px
+
+.summ-slider-wrap,
+.days-slider-wrap
+	position: relative
+	width: 70%
+	@include mq($max-width: 900px)
+		width: 100%
+		margin-bottom: 20px
+
+.ui-widget.ui-widget-content
+	border: none
+	height: 3px
+
+// общая шкала
+.ui-slider-range
+	background: $gray1
+
+// шкала прогресса
+.summ-slider,
+.days-slider
+	background: $green
+
+// ползунок
+.ui-slider-horizontal .ui-slider-handle
+	width: 40px
+	height: 20px
+	border-radius: 50px
+	background: $green
+	border: none
+	top: -0.6em
+	margin-left: -20px
+	&:before,
+	&:after
+		content: ''
+		display: block
+		position: absolute
+		top: 5px
+		height: 10px
+		width: 1px
+		background: $white
+	&:before
+		left: 40%
+	&:after
+		right: 40%
+
+
+
+.summ-counter-wrap,
+.days-counter-wrap
+	width: 25%
+	display: flex
+	align-items: center
+	justify-content: center
+	@include mq($max-width: 900px)
+		width: auto
+.summ-counter,
+.days-counter
+	width: 120px
+	height: 30px
+	margin: 0 10px
+	text-align: center
+	background: $white
+	border: 1px solid #E7E7E7
+	box-sizing: border-box
+	box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.1)
+	border-radius: 50px
+	font: 14px 'Gilroy', sans-serif
+.summ_minus,
+.summ_plus,
+.days_minus,
+.days_plus
+	font: 24px/1 'Gilroy', sans-serif
+	background: none
+
+
+
+
+
+
+
+
+
+.calculator
+	background: $white
+	border-radius: 10px
+	padding: 40px 65px
+	margin-bottom: 40px
+	@include mq($max-width: 1200px)
+		padding: 20px
+	&__title
+		font: bold 24px 'Gilroy', sans-serif
+		margin-bottom: 10px
+	&__text
+		font: 10px 'Gilroy', sans-serif
+		margin-bottom: 40px
+	.form
+		&-line
+			display: flex
+			align-items: center
+			justify-content: space-between
+			margin-bottom: 20px
+			@include mq($max-width: 1200px)
+				flex-wrap: wrap
+		&-extra
+			padding: 20px 0
+			&-inner
+				display: flex
+				align-items: flex-start
+				flex-wrap: wrap
+				padding: 20px 0
+			&__title
+				border-bottom: 1px solid $gray2
+				font: 14px 'Gilroy', sans-serif
+				cursor: pointer
+				padding-bottom: 25px
+				&.active
+					.icon
+						transform: rotate(180deg)
+				.icon
+					margin-left: 15px
+					display: inline-block
+					transition: all .3s ease-out
+					&:before
+						font-size: 10px
+		.select-wrap
+			display: flex
+			align-items: center
+			margin-bottom: 20px
+		.select-title
+			color: $gray3
+			font: bold 14px 'Gilroy', sans-serif
+			min-width: 130px
+		&__btn
+			cursor: pointer
+			transition: all .3s ease-out
+
+
+
+
+
+
+
+
+
+.cards
+	background: $white
+	padding: 35px 30px
+	border-radius: 10px
+	margin-bottom: 30px
+	@include mq($max-width: 900px)
+		padding: 30px 20px
+	&.active
+		border: 2px dashed $green
+		.cards__title
+			color: $green
+	&__title
+		color: $black
+		margin-left: 30px
+		font: bold 18px 'Gilroy', sans-serif
+		margin-bottom: 20px
+		@include mq($max-width: 900px)
+			margin-left: 0
+	.show-info
+		display: block
+		color: $black
+		text-align: center
+		font: 14px 'Gilroy', sans-serif
+		margin-top: 10px
+		&:hover
+			color: $green
+
+.card
+	padding: 25px 30px
+	border: 1px solid $gray4
+	border-radius: 10px
+	margin-bottom: 15px
+	@include mq($max-width: 900px)
+		padding: 20px
+	&__logo
+		display: block
+		max-width: 90px
+		height: auto
+		@include mq($max-width: 900px)
+			display: none
+	&-top
+		display: flex
+		align-items: center
+		justify-content: space-between
+		@include mq($max-width: 550px)
+			flex-wrap: wrap
+		.btn2
+			@include mq($max-width: 900px)
+				display: none
+	&-bottom
+		display: flex
+		align-items: center
+		justify-content: space-between
+		padding-top: 20px
+		@include mq($max-width: 550px)
+			padding-top: 0
+			flex-direction: column
+			align-items: center
+	.more-lists
+		display: none
+		@include mq($max-width: 550px)
+			display: block
+			text-align: center
+			color: #65A8CE
+			font: 14px 'Gilroy', sans-serif
+			margin-bottom: 20px
+			&:after
+				content: ''
+				display: inline-block
+				margin-left: 5px
+				width: 10px
+				height: 10px
+				transition: all .3s ease-out
+				background: url($img + 'icons/menu-arrow.svg') no-repeat center center / contain
+			&.active
+				&:after
+					transform: rotate(180deg)
+	&__title
+		font: bold 14px 'Gilroy', sans-serif
+		margin-bottom: 15px
+	&-block
+		@include mq($max-width: 550px)
+			width: 50%
+			margin-bottom: 15px
+		&__title
+			font: 300 14px 'Gilroy', sans-serif
+			margin-bottom: 5px
+		&__subtitle
+			font: bold 10px 'Gilroy', sans-serif
+			color: $gray5
+	&-list
+		font: 10px/1.5 'Gilroy', sans-serif
+		width: 31%
+		@include mq($max-width: 550px)
+			width: 100%
+			margin-bottom: 15px
+		li
+			position: relative
+			padding-left: 12px
+			&:before
+				content: ''
+				display: inline-block
+				width: 7px
+				height: 7px
+				background: $green
+				border-radius: 100%
+				position: absolute
+				left: 0
+				top: 2px
+	.btn2
+		padding: 10px 20px

@@ -1,0 +1,107 @@
+.header
+	padding: 30px 0
+	background: $white
+	@include mq($max-width: 1200px)
+		padding: 15px 0
+	.container
+		display: flex
+		align-items: center
+	.btn1
+		@include mq($max-width: 550px)
+			display: none
+	.logo
+		&__img
+			display: block
+			width: 180px
+			height: auto
+			@include mq($max-width: 900px)
+				width: 130px
+	.stellarnav
+		width: auto
+		margin-left: auto
+		margin-right: 35px
+		@include mq($max-width: 550px)
+			margin-right: 0
+		& > ul
+			& > li
+				@include mq($max-width: 1200px)
+					border-bottom: 1px solid #000
+				& > a
+					color: $black
+					font: 18px 'Gilroy', sans-serif
+					padding: 15px 0
+					@include mq($max-width: 1200px)
+						font-weight: bold
+					&:hover
+						color: $green
+		ul
+			ul
+				background: $white
+				box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.1)
+				padding: 30px 20px
+				&:before
+					content: ''
+					display: inline-block
+					position: absolute
+					width: 0
+					height: 0
+					border-style: solid
+					border-width: 0 10px 20px 10px
+					border-color: transparent transparent #ffffff transparent
+					top: -20px
+					left: 20px
+					@include mq($max-width: 1200px)
+						display: none
+		li.has-sub ul > li > a
+			padding: 4px 0
+			color: $black
+			font: 14px 'Gilroy', sans-serif
+			&:hover
+				color: $green
+		ul
+			& > li.active
+				a
+					color: $green
+	.stellarnav.desktop li.has-sub a
+		padding-right: 0
+
+	.stellarnav .icon-close
+		width: 26px
+		height: 26px
+		background: url($img+'icons/close.png') no-repeat center center / contain
+		&:before,
+		&:after
+			display: none
+	.stellarnav .close-menu
+		text-transform: none
+		font: 900 24px 'Gilroy', sans-serif
+		display: none
+		align-items: center
+		flex-direction: row-reverse
+		justify-content: space-between
+		color: $black
+		padding: 15px 0 !important
+		@include mq($max-width: 1200px)
+			display: flex !important
+	.stellarnav.mobile.left>ul, .stellarnav.mobile.right>ul
+		background: $white
+		padding: 0 15px
+	.stellarnav .dd-toggle
+		width: 16px
+		height: 16px
+		top: 15px
+	.stellarnav a.dd-toggle .icon-plus
+		background: url($img+'icons/menu-arrow.png') no-repeat center center / contain
+		width: 16px
+		&:before,
+		&:after
+			display: none
+	.stellarnav .call-btn-mobile, .stellarnav .close-menu, .stellarnav .location-btn-mobile, .stellarnav .menu-toggle
+		padding: 0
+	.stellarnav .menu-toggle span.bars
+		margin-right: 0
+	.stellarnav .menu-toggle span.bars span
+		background: $black
+		height: 3px
+		width: 25px
+		margin: 5px 0

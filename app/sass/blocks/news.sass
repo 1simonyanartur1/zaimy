@@ -1,0 +1,110 @@
+.news
+	margin: 45px 0
+	@include mq($max-width: 1200px)
+		margin: 30px 0 60px
+	#tabs
+		background: $white
+		padding: 50px 10px
+		border-radius: 10px
+		height: auto
+		@include mq($max-width: 1200px)
+			padding: 0
+			background: none
+
+	.ui-tabs .ui-tabs-nav
+		padding: 0
+		background: none
+		border: none
+		display: flex
+		flex-wrap: wrap
+		align-items: center
+		justify-content: center
+		margin-bottom: 30px
+		@include mq($max-width: 1200px)
+			background: $white
+			padding: 20px
+			border-radius: 10px
+			justify-content: flex-start
+			flex-wrap: nowrap
+			overflow: auto
+		@include mq($max-width: 550px)
+			padding: 10px 0
+	.ui-tabs .ui-tabs-nav li
+		background: none
+		padding: 0
+		border: none
+		margin: 0 10px
+		float: none
+		@include mq($max-width: 550px)
+			margin: 0 5px
+	.ui-tabs .ui-tabs-nav li a
+		font: 14px 'Gilroy', sans-serif
+		position: relative
+		&:after
+			content: ''
+			display: none
+			height: 1px
+			width: 100%
+			background: $green3
+		&:hover
+			color: $green3
+	.ui-tabs .ui-tabs-nav li.ui-tabs-active a
+		color: $green3
+		&:after
+			display: block
+
+	.ui-tabs .ui-tabs-panel
+		@include mq($max-width: 1200px)
+			padding: 0
+
+	.items
+		display: flex
+		flex-wrap: wrap
+
+	.item
+		margin: 0 10px
+		&__img
+			display: block
+			width: 100%
+			border-radius: 10px
+		&.big
+			width: 710px
+			@include mq($max-width: 1200px)
+				width: 100%
+				margin-bottom: 30px
+			.item__img
+				@include mq($max-width: 1200px)
+					margin-bottom: 15px
+		&.small
+			width: 340px
+			@include mq($max-width: 1200px)
+				width: 100%
+				display: flex
+				align-items: flex-start
+				border-bottom: 1px solid #CDCDCD
+				margin-bottom: 15px
+				padding-bottom: 15px
+			.item__img
+				@include mq($max-width: 1200px)
+					width: 20%
+				@include mq($max-width: 550px)
+					width: 30%
+		.text-container
+			padding: 20px
+			@include mq($max-width: 1200px)
+				padding: 0 10px
+
+	.show-more
+		color: $green
+		position: relative
+		font: bold 14px 'Gilroy', sans-serif
+		margin-left: calc(50% - 39px)
+		margin-top: 40px
+		&:after
+			content: '\e818'
+			font-family: fontello
+			display: block
+			position: absolute
+			transform: rotate(90deg)
+			bottom: -20px
+			left: calc(50% - 10px)

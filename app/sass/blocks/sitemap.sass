@@ -1,0 +1,24 @@
+.sitemap
+	margin: 95px 0
+	@include mq($max-width: 1200px)
+		margin: 30px 15px
+	.container
+		background: $white
+		border-radius: 10px
+		padding: 75px 80px
+		@include mq($max-width: 1200px)
+			padding: 20px
+	&__title
+		font: bold 24px 'Gilroy', sans-serif
+		margin-bottom: 25px
+	.block
+		margin-bottom: 30px
+		&__title
+			font: bold 18px 'Gilroy', sans-serif
+			margin-bottom: 15px
+	.list
+		a
+			font: 14px/1.6 'Gilroy', sans-serif
+			color: $black
+			&:hover
+				color: $green

@@ -1,0 +1,11 @@
+@font-face {
+	font-family: 'GilroyHeavy';
+	src: url('GilroyHeavy.eot');
+	src: url('GilroyHeavy.eot?#iefix') format('embedded-opentype'),
+			url('GilroyHeavy.woff2') format('woff2'),
+			url('GilroyHeavy.woff') format('woff'),
+			url('GilroyHeavy.ttf') format('truetype'),
+			url('GilroyHeavy.svg#GilroyHeavy') format('svg');
+	font-weight: 900;
+	font-style: normal;
+}

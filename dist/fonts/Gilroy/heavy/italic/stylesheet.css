@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'Gilroy';
+    src: url('Gilroy-HeavyItalic.eot');
+    src: url('Gilroy-HeavyItalic.eot?#iefix') format('embedded-opentype'),
+        url('Gilroy-HeavyItalic.woff2') format('woff2'),
+        url('Gilroy-HeavyItalic.woff') format('woff'),
+        url('Gilroy-HeavyItalic.ttf') format('truetype'),
+        url('Gilroy-HeavyItalic.svg#Gilroy-HeavyItalic') format('svg');
+    font-weight: 900;
+    font-style: italic;
+}
+

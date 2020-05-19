@@ -1,0 +1,42 @@
+.text
+	background: $white
+	padding: 35px 30px
+	border-radius: 10px
+	margin-bottom: 30px
+
+.text-container
+	h1
+		font: bold 22px/1.4 'Gilroy', sans-serif
+		margin-bottom: 15px
+	h2
+		font: bold 18px/1.4 'Gilroy', sans-serif
+		margin-bottom: 15px
+	h3
+		font: bold 16px/1.4 'Gilroy', sans-serif
+		margin-bottom: 15px
+	p
+		font: 14px/1.4 'Gilroy', sans-serif
+		margin-bottom: 15px
+	ul
+		font: 14px/1.4 'Gilroy', sans-serif
+		margin-bottom: 20px
+		li
+			position: relative
+			padding-left: 12px
+			&:before
+				content: ''
+				display: inline-block
+				width: 7px
+				height: 7px
+				background: $green
+				border-radius: 100%
+				position: absolute
+				left: 0
+				top: 4px
+	img
+		display: block
+		width: 100%
+		height: auto
+		margin-bottom: 20px
+		@include mq($max-width: 1200px)
+			border-radius: 10px

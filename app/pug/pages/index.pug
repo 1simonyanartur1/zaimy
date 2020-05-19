@@ -1,0 +1,189 @@
+- var img = 'img/';
+       
+doctype
+html
+	include ../blocks/head.pug
+		title Займы
+	body
+		include ../blocks/header.pug
+
+		section.breadcrumbs
+			.container
+				ul
+					li
+						a(href="#") Микрозаймы
+					li
+						a(href="#") На карту
+
+		.page-container
+			section.mainpage
+				.container
+					.page-content
+						.calculator
+							h2.calculator__title Микрозаймы в Москве
+							p.calculator__text Введите сумму займа, руб.
+							form.form(action="#")
+								.form-line
+									.summ-slider-wrap
+										span.summ_min 
+										.summ-slider
+										span.summ_max
+									.summ-counter-wrap
+										button.summ_minus -
+										input.summ-counter(type="text" value="10000")
+										button.summ_plus +
+								p.calculator__text Срок, дней
+								.form-line
+									.days-slider-wrap
+										span.days_min
+										.days-slider
+										span.days_max
+									.days-counter-wrap
+										button.days_minus -
+										input.days-counter(type="text" value="")
+										button.days_plus +
+								.form-extra
+									h2.form-extra__title Дополнительные условия <span class="icon icon-bird"></span>
+									.form-extra-inner
+										.selects
+											.select-wrap
+												h3.select-title Способ получения
+												select(name="method" id="method")
+													option(value="Неважно" data-display="Неважно") Неважно
+													option(value="Наличные" data-display="Наличные") Наличные
+													option(value="Карта или счет" data-display="Карта или счет") Карта или счет
+													option(value="Платежные системы" data-display="Платежные системы") Платежные системы
+											.select-wrap
+												h3.select-title Оформление
+												select(name="method" id="method")
+													option(value="Неважно" data-display="Неважно") Неважно
+													option(value="Наличные" data-display="Наличные") Наличные
+													option(value="Карта или счет" data-display="Карта или счет") Карта или счет
+													option(value="Платежные системы" data-display="Платежные системы") Платежные системы
+										.checkboxes
+											label.checkbox
+												input.checkbox__input(type="checkbox")
+												span.checkbox__mark Отсрочка
+											label.checkbox 
+												input.checkbox__input(type="checkbox")
+												span.checkbox__mark Пролонгация
+								button.form__btn.btn1 Подобрать займ
+						.cards.active
+							h2.cards__title Специальные предложения
+							.card
+								h3.card__title «До зарплаты»
+								.card-top
+									img.card__logo(src=img+"card-logo.jpg", alt="")
+									.card-block
+										h3.card-block__title 0,02% в день
+										h4.card-block__subtitle Ставка
+									.card-block
+										h3.card-block__title 1 000 - 500 000
+										h4.card-block__subtitle Сумма
+									.card-block
+										h3.card-block__title 1-730 дней
+										h4.card-block__subtitle Срок
+									.card-block
+										h3.card-block__title До 60 минут
+										h4.card-block__subtitle Рассмотрение
+									a.btn2(href="#") Подробнее
+								.card-bottom
+									ul.card-list
+										li Возраст заемщика: от 18 лет
+										li Получение займа: наличные, банковский счет
+										li Погашение: ежемесячно или в конце срока
+									ul.card-list
+										li Возраст заемщика: от 18 лет
+										li Получение займа: наличные, банковский счет
+										li Погашение: ежемесячно или в конце срока
+									ul.card-list
+										li Возраст заемщика: от 18 лет
+										li Получение займа: наличные, банковский счет
+										li Погашение: ежемесячно или в конце срока
+									a.more-lists(href="#") Подробнее
+									a.btn2(href="#") Подробнее
+							
+						.cards
+							.card
+								h3.card__title «До зарплаты»
+								.card-top
+									img.card__logo(src=img+"card-logo.jpg", alt="")
+									.card-block
+										h3.card-block__title 0,02% в день
+										h4.card-block__subtitle Ставка
+									.card-block
+										h3.card-block__title 1 000 - 500 000
+										h4.card-block__subtitle Сумма
+									.card-block
+										h3.card-block__title 1-730 дней
+										h4.card-block__subtitle Срок
+									.card-block
+										h3.card-block__title До 60 минут
+										h4.card-block__subtitle Рассмотрение
+									a.btn2(href="#") Подробнее
+								.card-bottom
+									ul.card-list
+										li Возраст заемщика: от 18 лет
+										li Получение займа: наличные, банковский счет
+										li Погашение: ежемесячно или в конце срока
+									ul.card-list
+										li Возраст заемщика: от 18 лет
+										li Получение займа: наличные, банковский счет
+										li Погашение: ежемесячно или в конце срока
+									ul.card-list
+										li Возраст заемщика: от 18 лет
+										li Получение займа: наличные, банковский счет
+										li Погашение: ежемесячно или в конце срока
+									a.more-lists(href="#") Подробнее
+									a.btn2(href="#") Подробнее
+							a(href="#").show-info Показать еще <span>10</span> из <span>45</span>
+						.text
+							.text-container
+								h2 Виды микрозаймов
+								p Срочный микрозайм бывает разных видов в зависимости от своих параметров:
+								ul
+									li От способа предоставления: наличными, на карточный счет, на электронный кошелек Webmoney или Киви;
+									li От начисления процентов: займы с начислением процентов и без;
+									li От статуса клиента в МФО: для постоянных заемщиков и новичков.
+								p От вида микрокредита зависит его величина, продолжительность и процентная ставка.
+								br
+								br
+								h2 Условия по займам
+								p Взять быстрый микрозайм можно во многих МФК, вот условия наиболее популярных:
+								img(src=img+"table.jpg", alt="")
+								p Например, если взять в долг в МФО «Быстроденьги» 5 тыс. руб., на период до 10 дней, под 1,07% в день, вернуть придется 5537 руб., переплата 537 руб. При оформлении сделки в МКК «Займер», переплата составит 315 руб. при тех же условиях вложения.
+								p Требования к кредитозаемщикам:
+								ul
+									li Возраст с 18–20 лет до 65–70 лет;
+									li Гражданство РФ
+									li Наличие достаточного дохода для погашения долга, документально подтверждать величину заработка не требуется.
+								p Подать заявку можно через интернет, что крайне удобно. Время рассмотрения заявки по мгновенным минизаймам, от нескольких минут до нескольких дней.
+
+					.page-sidebar
+						.filter
+							h2.filter__title Подбор займов
+							ul
+								li.active
+									a(href="#") На карту
+								li
+									a(href="#") Онлайн
+								li
+									a(href="#") Под ПТС
+								li
+									a(href="#") На карту без отказа
+								li
+									a(href="#") Без процентов
+								li
+									a(href="#") Быстрые
+								li
+									a(href="#") На Киви
+								li
+									a(href="#") Без проверок
+								li
+									a(href="#") Без отказа
+								li
+									a(href="#") Подбор кредитов и займов
+
+		include ../blocks/footer.pug
+
+		include ../blocks/scripts.pug
