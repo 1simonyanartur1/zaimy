@@ -67,6 +67,12 @@
 				var tooltipSumm = '<div class="summ-tooltip"><div class="summ-tooltip-inner">' + ui.value + '</div></div>';
 				$(this).find('.ui-slider-handle').html(tooltipSumm);
 				$('.mainpage .form .summ-counter').val(ui.value);
+				var t = (ui.value / summMax) * 100;
+				if(100 - t < 10) {
+					$('.summ_max').hide();
+				} else {
+					$('.summ_max').show();
+				}
 			}
 		});
 
@@ -85,6 +91,13 @@
 				var tooltipDays = '<div class="days-tooltip"><div class="days-tooltip-inner">' + ui.value + '</div></div>';
 				$(this).find('.ui-slider-handle').html(tooltipDays);
 				$('.mainpage .form .days-counter').val(ui.value);
+				var t = (ui.value / daysMax) * 100;
+				if(100 - t < 10) {
+					$('.days_max').hide();
+				} else {
+					$('.days_max').show();
+				}
+
 			}
 		});
 
