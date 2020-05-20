@@ -23,7 +23,7 @@
 			breakpoint: 1200,
 			menuLabel: ' ',
 			position: 'right',
-			closeLabel: '<span class="close-text">Меню</span>',
+			closeLabel: '<span class="close-text">Меню</span>'
 		});
 
 		$('select').niceSelect();
@@ -179,20 +179,13 @@
 		}
 		daysCounter();
 
-		// if($(window).innerWidth() < 700) {
-		// 	$('.menu').hide();
-		// }
-
-		// $(document).on('click', '.burger', function() {
-		// 	if (!$(this).hasClass('active')) {
-		// 		$(this).addClass('active');
-		// 		$('.menu').slideDown();
-		// 	} else {
-		// 		$(this).removeClass('active');
-		// 		$('.menu').slideUp();
-		// 		$('.menu').removeClass('active');
-		// 	}
-		// });
+		$(document).on('click', '.anchor', function (e) {
+			var fixed_offset = 50;
+			$('html, body').stop().animate({
+				scrollTop: $(this.hash).offset().top - fixed_offset
+			}, 500);
+			e.preventDefault();
+		});
 
 	});
 })(jQuery);

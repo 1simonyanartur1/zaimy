@@ -73,8 +73,8 @@ html {
 .btn2 {
   background: #fff;
   border-radius: 5px;
-  padding: 11px 34px;
-  font: bold 18px 'Gilroy', sans-serif;
+  padding: 11px 45px;
+  font: bold 14px 'Gilroy', sans-serif;
   color: #24BD61;
   border: 1px solid #24BD61; }
   .btn2:hover {
@@ -114,6 +114,25 @@ html {
 .text-container h3 {
   font: bold 16px/1.4 'Gilroy', sans-serif;
   margin-bottom: 15px; }
+
+.text-container table {
+  font: 16px 'Gilroy', sans-serif;
+  border-collapse: collapse;
+  display: block;
+  width: 100%;
+  margin-bottom: 20px; }
+  @media only screen and (max-width: 700px) {
+    .text-container table {
+      overflow: hidden;
+      overflow-x: scroll; } }
+  @media only screen and (max-width: 700px) {
+    .text-container table tbody {
+      min-width: 680px;
+      display: block; } }
+  .text-container table tr:nth-child(odd) {
+    background: #F5F5F5; }
+  .text-container table td {
+    padding: 10px; }
 
 .text-container p {
   font: 14px/1.4 'Gilroy', sans-serif;
@@ -184,7 +203,7 @@ html {
       padding: 15px 0; }
       @media only screen and (max-width: 1200px) {
         .header .stellarnav > ul > li > a {
-          font-weight: bold; } }
+          padding: 10px 0; } }
       .header .stellarnav > ul > li > a:hover {
         color: #24BD61; }
     .header .stellarnav ul ul {
@@ -192,6 +211,12 @@ html {
       -webkit-box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.1);
       box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.1);
       padding: 30px 20px; }
+      @media only screen and (max-width: 1200px) {
+        .header .stellarnav ul ul {
+          padding: 15px 0;
+          background: none;
+          -webkit-box-shadow: none;
+          box-shadow: none; } }
       .header .stellarnav ul ul:before {
         content: '';
         display: inline-block;
@@ -247,12 +272,12 @@ html {
     background: #fff;
     padding: 0 15px; }
   .header .stellarnav .dd-toggle {
-    width: 16px;
-    height: 16px;
-    top: 15px; }
+    width: 12px;
+    height: 12px;
+    top: 0; }
   .header .stellarnav a.dd-toggle .icon-plus {
     background: url("../img/icons/menu-arrow.png") no-repeat center center/contain;
-    width: 16px; }
+    width: 12px; }
     .header .stellarnav a.dd-toggle .icon-plus:before, .header .stellarnav a.dd-toggle .icon-plus:after {
       display: none; }
   .header .stellarnav .call-btn-mobile, .header .stellarnav .close-menu, .header .stellarnav .location-btn-mobile, .header .stellarnav .menu-toggle {
@@ -264,6 +289,9 @@ html {
     height: 3px;
     width: 25px;
     margin: 5px 0; }
+  .header .stellarnav li.open > a.dd-toggle .icon-plus {
+    -webkit-transform: rotate(180deg) !important;
+    transform: rotate(180deg) !important; }
 
 .breadcrumbs {
   background: #24BD61;
@@ -570,6 +598,11 @@ html {
     border: 2px dashed #24BD61; }
     .cards.active .cards__title {
       color: #24BD61; }
+    .cards.active .card__logo {
+      display: block; }
+      @media only screen and (max-width: 900px) {
+        .cards.active .card__logo {
+          display: none; } }
   .cards__title {
     color: #000;
     margin-left: 30px;
@@ -596,12 +629,10 @@ html {
     .card {
       padding: 20px; } }
   .card__logo {
-    display: block;
+    display: none;
     max-width: 90px;
-    height: auto; }
-    @media only screen and (max-width: 900px) {
-      .card__logo {
-        display: none; } }
+    height: auto;
+    margin-right: 25px; }
   .card-top {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -616,9 +647,11 @@ html {
       .card-top {
         -ms-flex-wrap: wrap;
         flex-wrap: wrap; } }
-    @media only screen and (max-width: 900px) {
-      .card-top .btn2 {
-        display: none; } }
+    .card-top .btn2 {
+      margin-left: auto; }
+      @media only screen and (max-width: 900px) {
+        .card-top .btn2 {
+          display: none; } }
   .card-bottom {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -640,6 +673,11 @@ html {
         -webkit-box-align: center;
         -ms-flex-align: center;
         align-items: center; } }
+    .card-bottom .btn2 {
+      display: none; }
+      @media only screen and (max-width: 550px) {
+        .card-bottom .btn2 {
+          display: block; } }
   .card .more-lists {
     display: none; }
     @media only screen and (max-width: 550px) {
@@ -668,12 +706,31 @@ html {
     .card-block {
       width: 50%;
       margin-bottom: 15px; } }
+  .card-block:not(:last-child) {
+    margin-right: 25px; }
+    @media only screen and (max-width: 550px) {
+      .card-block:not(:last-child) {
+        margin-right: 0; } }
+  .card-block:nth-child(3) .card-block__title:after {
+    content: '\f158';
+    font-family: fontello;
+    font-size: 12px;
+    margin-left: 5px; }
+    @media only screen and (max-width: 550px) {
+      .card-block:nth-child(3) .card-block__title:after {
+        font-size: 10px; } }
   .card-block__title {
     font: 300 14px 'Gilroy', sans-serif;
     margin-bottom: 5px; }
+    @media only screen and (max-width: 550px) {
+      .card-block__title {
+        font-size: 12px; } }
   .card-block__subtitle {
     font: bold 10px 'Gilroy', sans-serif;
     color: #A3A3A3; }
+    @media only screen and (max-width: 550px) {
+      .card-block__subtitle {
+        font-size: 9px; } }
   .card-list {
     font: 10px/1.5 'Gilroy', sans-serif;
     width: 31%; }
@@ -694,8 +751,6 @@ html {
         position: absolute;
         left: 0;
         top: 2px; }
-  .card .btn2 {
-    padding: 10px 20px; }
 
 .sitemap {
   margin: 95px 0; }
@@ -846,12 +901,19 @@ html {
           border-bottom: 1px solid #CDCDCD;
           margin-bottom: 15px;
           padding-bottom: 15px; } }
+  @media only screen and (max-width: 1200px) and (max-width: 550px) {
+    .news .item.small {
+      padding-bottom: 0; } }
       @media only screen and (max-width: 1200px) {
         .news .item.small .item__img {
           width: 20%; } }
       @media only screen and (max-width: 550px) {
         .news .item.small .item__img {
           width: 30%; } }
+      @media only screen and (max-width: 375px) {
+        .news .item.small .item__img {
+          width: 33%;
+          margin-right: 5px; } }
     .news .item .text-container {
       padding: 20px; }
       @media only screen and (max-width: 1200px) {
@@ -863,6 +925,9 @@ html {
     font: bold 14px 'Gilroy', sans-serif;
     margin-left: calc(50% - 39px);
     margin-top: 40px; }
+    @media only screen and (max-width: 550px) {
+      .news .show-more {
+        margin-top: 20px; } }
     .news .show-more:after {
       content: '\e818';
       font-family: fontello;

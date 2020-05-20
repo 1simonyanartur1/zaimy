@@ -31,7 +31,7 @@
 					font: 18px 'Gilroy', sans-serif
 					padding: 15px 0
 					@include mq($max-width: 1200px)
-						font-weight: bold
+						padding: 10px 0
 					&:hover
 						color: $green
 		ul
@@ -39,6 +39,10 @@
 				background: $white
 				box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.1)
 				padding: 30px 20px
+				@include mq($max-width: 1200px)
+					padding: 15px 0
+					background: none
+					box-shadow: none
 				&:before
 					content: ''
 					display: inline-block
@@ -87,12 +91,12 @@
 		background: $white
 		padding: 0 15px
 	.stellarnav .dd-toggle
-		width: 16px
-		height: 16px
-		top: 15px
+		width: 12px
+		height: 12px
+		top: 0
 	.stellarnav a.dd-toggle .icon-plus
 		background: url($img+'icons/menu-arrow.png') no-repeat center center / contain
-		width: 16px
+		width: 12px
 		&:before,
 		&:after
 			display: none
@@ -105,3 +109,5 @@
 		height: 3px
 		width: 25px
 		margin: 5px 0
+	.stellarnav li.open>a.dd-toggle .icon-plus
+		transform: rotate(180deg) !important

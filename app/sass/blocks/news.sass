@@ -84,11 +84,16 @@
 				border-bottom: 1px solid #CDCDCD
 				margin-bottom: 15px
 				padding-bottom: 15px
+				@include mq($max-width: 550px)
+					padding-bottom: 0
 			.item__img
 				@include mq($max-width: 1200px)
 					width: 20%
 				@include mq($max-width: 550px)
 					width: 30%
+				@include mq($max-width: 375px)
+					width: 33%
+					margin-right: 5px
 		.text-container
 			padding: 20px
 			@include mq($max-width: 1200px)
@@ -100,6 +105,8 @@
 		font: bold 14px 'Gilroy', sans-serif
 		margin-left: calc(50% - 39px)
 		margin-top: 40px
+		@include mq($max-width: 550px)
+			margin-top: 20px
 		&:after
 			content: '\e818'
 			font-family: fontello
