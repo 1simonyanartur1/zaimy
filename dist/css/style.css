@@ -191,6 +191,9 @@ html {
     width: auto;
     margin-left: auto;
     margin-right: 35px; }
+    @media only screen and (max-width: 1200px) {
+      .header .stellarnav {
+        overflow: none !important; } }
     @media only screen and (max-width: 550px) {
       .header .stellarnav {
         margin-right: 0; } }

@@ -20,6 +20,8 @@
 		width: auto
 		margin-left: auto
 		margin-right: 35px
+		@include mq($max-width: 1200px)
+			overflow: none !important
 		@include mq($max-width: 550px)
 			margin-right: 0
 		& > ul
